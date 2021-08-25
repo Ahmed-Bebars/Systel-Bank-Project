@@ -1,0 +1,30 @@
+Info
+-------------------------
+
+Application: SecureCRT
+Version: 8.3.3
+Architecture: x64
+Build: 1646
+Date: May 3, 2018
+
+
+Portable version
+-------------------------
+
+Simply copy the file Portable\SecureCRT833-Portable.exe anywhere on the disk.
+You can rename the file to any name allowed by Windows.
+Execute it.
+Done!.
+
+
+Installable version
+-------------------------
+
+Install SecureCRT with Install\SecureCRT-833-x64-Install.exe.
+Do not execute the installed SecureCRT.
+Copy the files LicenseHelper.exe and SecureCRT.exe in the folder Install\Patch\
+  to C:\Program Files\VanDyke Software\SecureCRT\. Overwrite the existing files.
+Double click in the file Install\Patch\License.reg. Accept to enter the content
+  of this file to the Windows Registry.
+Execute SecureCRT.
+Done!.

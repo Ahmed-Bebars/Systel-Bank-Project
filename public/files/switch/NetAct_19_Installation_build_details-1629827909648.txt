@@ -1,0 +1,128 @@
+================================
+NetAct 19 build details
+================================
+
+This file lists the software version ISO images to be used during N19 Installation.
+
+==========================================================================
+Software Product Details common for all variants
+===========================================================================
+
+1. NetAct ISO
+
+netact19-product-19.0.0.439-disc1.iso 
+netact19-product-19.0.0.439-disc1.iso.sha2.txt 
+netact19-product-19.0.0.439-disc2.iso 
+netact19-product-19.0.0.439-disc2.iso.sha2.txt 
+netact19-product-19.0.0.439-disc3.iso 
+netact19-product-19.0.0.439-disc3.iso.sha2.txt 
+netact19-product-19.0.0.439-disc4.iso  
+netact19-product-19.0.0.439-disc4.iso.sha2.txt 
+netact19-product-19.0.0.439-disc5.iso
+netact19-product-19.0.0.439-disc5.iso.sha2.txt 
+netact19-product-19.0.0.439-disc6.iso 
+netact19-product-19.0.0.439-disc6.iso.sha2.txt   
+netact19-product-19.0.0.439-disc7.iso 
+netact19-product-19.0.0.439-disc7.iso.sha2.txt 
+netact19-product-19.0.0.439-disc8.iso 
+netact19-product-19.0.0.439-disc8.iso.sha2.txt 
+
+
+2. Oracle binaries
+
+oracle_binaries-product-19.0.0.28-disc1.iso
+oracle_binaries-product-19.0.0.28-disc1.iso.sha2.txt
+
+oracle_binaries-product-19.0.0.28-disc2.iso
+oracle_binaries-product-19.0.0.28-disc2.iso.sha2.txt
+
+3. OEM Software
+
+Oem_Software-product-19.1.0.9-disc1.iso
+Oem_Software-product-19.1.0.9-disc1.iso.sha2.txt
+
+4. RHEL7 Errata
+
+rhel7_errata-product-19.1.0.153-disc1.iso
+rhel7_errata-product-19.1.0.153-disc1.iso.sha2.txt
+
+
+
+
+
+===============================================================================================================
+NetAct Software Product details for Cloud OpenStack
+===============================================================================================================
+1. RHEL Image
+netact_rhel7_base_199.tar.gz
+netact_rhel7_base_199.tar.gz.sha2.txt
+
+2. IE Image
+rhel7_insteng_309.tar.gz.
+rhel7_insteng_309.tar.gz.sha2.txt
+
+3. Administration Server Image
+administration_server_openstack_18_7_425.tar.gz.
+administration_server_openstack_18_7_425.tar.gz.sha2.txt
+
+
+5. NMS Images
+ NMS_OpenStack_19.1.0.16_OpenStack.00.tgz  
+ NMS_OpenStack_19.1.0.16_OpenStack.01.tgz  
+ NMS_OpenStack_19.1.0.16_OpenStack.02.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.03.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.04.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.05.tgz   
+ NMS_OpenStack_19.1.0.16_OpenStack.06.tgz  
+ NMS_OpenStack_19.1.0.16_OpenStack.07.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.08.tgz   
+ NMS_OpenStack_19.1.0.16_OpenStack.09.tgz    
+ NMS_OpenStack_19.1.0.16_OpenStack.10.tgz  
+ NMS_OpenStack_19.1.0.16_OpenStack.11.tgz   
+ NMS_OpenStack_19.1.0.16_OpenStack.12.tgz    
+ NMS_OpenStack_19.1.0.16_OpenStack.13.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.14.tgz    
+ NMS_OpenStack_19.1.0.16_OpenStack.15.tgz  
+ NMS_OpenStack_19.1.0.16_OpenStack.16.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.17.tgz 
+ NMS_OpenStack_19.1.0.16_OpenStack.checksum.txt 
+
+6. NMS adaptation package: 	
+Nokia-NodeManagerServer-Adaptation-19.0.0.29.zip
+
+
+==========================================================
+NetAct software Product details for Standard Installation
+==========================================================
+
+1. Administration Server
+
+administration_server_vmware-1.0.1404.35.ova.gz
+administration_server_vmware-1.0.1404.35.ova.gz.sha2.txt
+
+2. Nokia-VMware-product ISO 
+
+2_ESXi65U3-HP-2393222.zip
+2_ESXi65U3-HP-2393222.zip.sha2.txt
+
+Nokia-VMware-product-vsphere-6.5u3.1074-disc1.iso
+Nokia-VMware-product-vsphere-6.5u3.1074-disc1.iso.sha2.txt
+
+Nokia-VMware-product-vsphere-6.5u3.1074-disc2.iso
+Nokia-VMware-product-vsphere-6.5u3.1074-disc2.iso.sha2.txt
+
+
+===================================================================================
+NetAct Software Product details for VMware Installation
+===================================================================================
+
+1. Administration Server image 
+administration_server_vmware-1.0.1404.35.ova.gz
+administration_server_vmware-1.0.1404.35.ova.gz.sha2.txt
+
+
+
+
+	
+
+

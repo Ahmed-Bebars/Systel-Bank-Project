@@ -1,0 +1,604 @@
+[root@enetcelery1 ~]# systemctl | grep failed
+? network.service                                                                                  loaded failed failed    LSB: Bring up/down networking
+[root@enetcelery1 ~]# systemctl status network
+? network.service - LSB: Bring up/down networking
+   Loaded: loaded (/etc/rc.d/init.d/network; bad; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Fri 2020-09-04 12:04:38 GMT; 2 days ago
+     Docs: man:systemd-sysv-generator(8)
+
+Sep 04 12:04:37 enetcelery1 systemd[1]: Starting LSB: Bring up/down networking...
+Sep 04 12:04:38 enetcelery1 network[6746]: Bringing up loopback interface:  [  OK  ]
+Sep 04 12:04:38 enetcelery1 network[6746]: Bringing up interface ens192:  Error: Connection activation failed: No su...ction.
+Sep 04 12:04:38 enetcelery1 network[6746]: [FAILED]
+Sep 04 12:04:38 enetcelery1 systemd[1]: network.service: control process exited, code=exited status=1
+Sep 04 12:04:38 enetcelery1 systemd[1]: Failed to start LSB: Bring up/down networking.
+Sep 04 12:04:38 enetcelery1 systemd[1]: Unit network.service entered failed state.
+Sep 04 12:04:38 enetcelery1 systemd[1]: network.service failed.
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@enetcelery1 ~]#
+[root@enetcelery1 ~]#
+
+
+root@enetmgmt ~]# ssh 192.168.17.243
+Last login: Sat Sep  5 10:08:26 2020 from 192.168.17.246
+[root@enetcvmdb ~]#  systemctl | grep failed
+? app-dirsrv.service                                                                               loaded failed failed    RH389 DS Service Monitor
+? network.service                                                                                  loaded failed failed    LSB: Bring up/down networking
+[root@enetcvmdb ~]#
+
+
+
+
+2020/09/07 10:32:15 [error] 7663#7663: *65022 connect() to unix:/var/run/enet/stats.user_manager.sock failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /appManager/stats/app/user_manager HTTP/1.1", upstream: "http://unix:/var/run/enet/stats.user_manager.sock:/appManager/stats/app/user_manager", host: "localhost:9600"
+2020/09/07 10:32:15 [error] 7667#7667: *65024 connect() to unix:/var/run/enet/stats.escript.sock failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /appManager/stats/app/escript HTTP/1.1", upstream: "http://unix:/var/run/enet/stats.escript.sock:/appManager/stats/app/escript", host: "localhost:9600"
+2020/09/07 10:32:15 [error] 7660#7660: *65030 connect() to unix:/var/run/enet/stats.enb_autoplanning_manager_app.sock failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /appManager/stats/app/enb_autoplanning_manager_app HTTP/1.1", upstream: "http://unix:/var/run/enet/stats.enb_autoplanning_manager_app.sock:/appManager/stats/app/enb_autoplanning_manager_app", host: "localhost:9600"
+2020/09/07 10:32:15 [error] 7663#7663: *65036 connect() to unix:/var/run/enet/stats.scriptPlanMapperApp.sock failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /appManager/stats/app/scriptPlanMapperApp HTTP/1.1", upstream: "http://unix:/var/run/enet/stats.scriptPlanMapperApp.sock:/appManager/stats/app/scriptPlanMapperApp", host: "localhost:9600"
+
+
+
+
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service sonConfigService and app sonConfigApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: sonConfigApp, service_name: sonConfigService, service_path
+: /sonconfig
+ERROR   | 2020-09-07 10:35:47+0000| service_discovery:179| 7044|  Unhandled status 502 from http://192.168.17.241:9600/app_se
+rvers
+waiting for app_servers api to respond...26
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_se
+rver
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service sonConfigService and app sonConfigApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: sonConfigApp, service_name: sonConfigService, service_path
+: /sonconfig
+ERROR   | 2020-09-07 10:35:49+0000| service_discovery:179| 7044|  Unhandled status 502 from http://192.168.17.241:9600/app_se
+rvers
+waiting for app_servers api to respond...27
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_se
+rver
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service sonConfigService and app sonConfigApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: sonConfigApp, service_name: sonConfigService, service_path
+: /sonconfig
+ERROR   | 2020-09-07 10:35:51+0000| service_discovery:179| 7044|  Unhandled status 502 from http://192.168.17.241:9600/app_se
+rvers
+waiting for app_servers api to respond...28
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+:
+
+
+
+
+
+
+
+r persistence unit 'default'
+2020-09-07_10:37:59.263 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2020-09-07_10:37:59.410 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.2.Final}
+2020-09-07_10:37:59.412 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-09-07_10:37:59.413 INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2020-09-07_10:37:59.504 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-09-07_10:37:59.793 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-09-07_10:38:00.161 WARN  o.h.t.d.j.JavaTypeDescriptorRegistry - Could not find matching type descriptor for requested Java class [java.util.List]; using fallback
+2020-09-07_10:38:00.828 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-07_10:38:00.844 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-09-07_10:38:00.844 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2020-09-07_10:38:00.923 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-09-07_10:38:00.972 WARN  o.h.t.d.j.JavaTypeDescriptorRegistry - Could not find matching type descriptor for requested Java class [java.util.List]; using fallback
+2020-09-07_10:38:01.173 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-07_10:38:01.304 WARN  c.n.e.s.d.s.DiscoveryServiceClient - Discovery service is unavailable.
+2020-09-07_10:38:06.318 WARN  c.n.e.s.d.s.DiscoveryServiceClient - Discovery service is unavailable.
+2020-09-07_10:38:11.320 WARN  c.n.e.s.d.s.DiscoveryServiceClient - Discovery service is unavailable.
+2020-09-07_10:38:16.324 WARN  c.n.e.s.d.s.DiscoveryServiceClient - Discovery service is unavailable.
+[uwsgi] | 2020-09-07 10:38:17 +0000 | - received message 1 from emperor
+[uwsgi] | 2020-09-07 10:38:17 +0000 | - [uwsgi-daemons] stopping daemon (pid: 27537): /bin/sh /home/vson/enet/lib/python3.7/site-packages/enet_services/module_commanding_setenv.sh run
+[uwsgi] | 2020-09-07 10:38:18 +0000 | - ...gracefully killing workers...
+[uwsgi] | 2020-09-07 10:38:18 +0000 | - Gracefully killing worker 1 (pid: 27536)...
+Traceback (most recent call last):
+
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - worker 1 buried after 1 seconds
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - binary reloading uWSGI...
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - chdir() to /etc/enet/enetservice/run
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - closing all non-uwsgi socket fds > 2 (max_fd = 16384)...
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - found fd 7 mapped to socket 0 (/var/run/enet/module_commanding_app.sock)
+[uwsgi] | 2020-09-07 10:38:19 +0000 | - running /home/vson/enet/bin/uwsgi
+*** has_emperor mode detected (fd: 20) ***
+[uWSGI] getting INI configuration from /etc/enet/enetservice/baseApp.ini
+[uWSGI] getting INI configuration from module_commanding_app.ini
+
+
+
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+INFO    | 2020-09-07 10:39:14+0000| triggering:56       | 27968|  Checking idle instances to be added to trigger events
+[uwsgi] | 2020-09-07 10:39:14 +0000 | - ...gracefully killing workers...
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+INFO    | 2020-09-07 10:39:14+0000| triggering:56       | 27970|  Checking idle instances to be added to trigger events
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+INFO    | 2020-09-07 10:39:14+0000| triggering:56       | 27964|  Checking idle instances to be added to trigger events
+ERROR:root:IOError occurred: [Errno 11] write could not complete without blocking
+--- Logging error ---
+ERROR   | 2020-09-07 10:39:14+0000| service_discovery:179| 27964|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+WARNING | 2020-09-07 10:39:14+0000| public_discovery:150| 27964|  Couldn't retrieve details for service son_app_manager_service and app None with id None
+WARNING | 2020-09-07 10:39:14+0000| public_discovery:154| 27964|  Use fallback url http://localhost:9600/son-app-manager
+[uwsgi] | 2020-09-07 10:39:14 +0000 | - mule 1 (pid: 27966) annihilated
+ERROR   | 2020-09-07 10:39:14+0000| service_discovery:179| 27970|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+WARNING | 2020-09-07 10:39:14+0000| public_discovery:150| 27970|  Couldn't retrieve details for service son_app_manager_service and app None with id None
+WARNING | 2020-09-07 10:39:14+0000| public_discovery:154| 27970|  Use fallback url http://localhost:9600/son-app-manager
+[uwsgi] | 2020-09-07 10:39:14 +0000 | - mule 2 (pid: 27968) annihilated
+[uwsgi] | 2020-09-07 10:39:17 +0000 | - received message 1 from emperor
+INFO    | 2020-09-07 10:39:29+0000| triggering:56       | 27964|  Checking idle instances to be added to trigger events
+INFO    | 2020-09-07 10:39:29+0000| triggering:56       | 27970|  Checking idle instances to be added to trigger events
+(END)
+
+
+
+
+rvers
+waiting for app_servers api to respond...27
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service scriptPlanMapperService and app scriptPlanMapperApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: scriptPlanMapperApp, service_name: scriptPlanMapperService, service_path: /scriptplanmap
+ERROR   | 2020-09-07 10:40:17+0000| service_discovery:179| 7141|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...28
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service scriptPlanMapperService and app scriptPlanMapperApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: scriptPlanMapperApp, service_name: scriptPlanMapperService, service_path: /scriptplanmap
+ERROR   | 2020-09-07 10:40:19+0000| service_discovery:179| 7141|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...29
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service scriptPlanMapperService and app scriptPlanMapperApp
+Traceback (most recent call last):
+
+
+
+
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+[uwsgi] | 2020-09-07 10:42:16 +0000 | - Gracefully killing worker 20 (pid: 28868)...
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+[uwsgi] | 2020-09-07 10:42:16 +0000 | - Gracefully killing worker 16 (pid: 28860)...
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+[uwsgi] | 2020-09-07 10:42:16 +0000 | - Gracefully killing worker 19 (pid: 28866)...
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+[uwsgi] | 2020-09-07 10:42:16 +0000 | - Gracefully killing worker 18 (pid: 28864)...
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_htt
+p_method
+    raise Exception(error_msg)
+Traceback (most recent call last)
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enet_app_lib/uwsgiServer.py", line 161, in <module>
+    application = initApp(entryPoint, configService=appConfigService, db=db)
+  File "/home/vson/enet/lib/python3.7/site-packages/enet_app_lib/uwsgiServer.py", line 80, in initApp
+    return initMethod(**params)
+  File "son_nbi/app/son_nbi_app.pyx", line 146, in son_nbi.app.son_nbi_app.init
+  File "son_nbi/app/son_nbi_app.pyx", line 248, in son_nbi.app.son_nbi_app.prepare_api
+  File "son_nbi/service/pm/service.pyx", line 94, in son_nbi.service.pm.service.SonPmService.__init__
+  File "son_nbi/app/son_nbi_app.pyx", line 213, in son_nbi.app.son_nbi_app.prepare_api.lambda
+  File "son_nbi/app/son_nbi_app.pyx", line 355, in son_nbi.app.son_nbi_app.get_kpi_clients_map
+  File "son_nbi/app/son_nbi_app.pyx", line 362, in son_nbi.app.son_nbi_app.get_first_available_region_name
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/region.py", line 53, in getRegionNames
+    return self.client.get(params=region_params)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 186, in get
+    return self.client.get(self.service_resolver.resolve(), relativePath, params, checkError=checkError, **options)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 81, in get
+    verify=verify, checkError=checkError, **options)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 133, in request
+    return self._prepare_response(checkError, response, stream)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 151, in _prepare_response
+    self.checkResponse(response)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 113, in checkResponse
+    raise Exception(u"Service returned code {0}. Message: {1}".format(response.status_code, response.text))
+Exception: Service returned code 502. Message: <html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - unable to load app 0 (mountpoint='') (callable not found or import error)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - *** no app loaded. going in full dynamic mode ***
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - dropping root privileges after application loading
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - *** uWSGI is running in multiple interpreter mode ***
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - gracefully (RE)spawned uWSGI master process (pid: 7079)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - spawned uWSGI worker 1 (pid: 29949, cores: 1)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - spawned uWSGI worker 2 (pid: 29950, cores: 1)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - spawned uWSGI worker 3 (pid: 29952, cores: 1)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - spawned uWSGI worker 4 (pid: 29953, cores: 1)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - *** Stats server enabled on /var/run/enet/stats.son_nbi_app.sock fd: 25 ***
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - subprocess 29910 exited with code 0
+(END)
+
+
+
+
+
+
+
+   response.raise_for_status()
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: http://192.168.17.241:9600/region
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enet_app_lib/uwsgiServer.py", line 161, in <module>
+    application = initApp(entryPoint, configService=appConfigService, db=db)
+  File "/home/vson/enet/lib/python3.7/site-packages/enet_app_lib/uwsgiServer.py", line 80, in initApp
+    return initMethod(**params)
+  File "son_nbi/app/son_nbi_app.pyx", line 146, in son_nbi.app.son_nbi_app.init
+  File "son_nbi/app/son_nbi_app.pyx", line 248, in son_nbi.app.son_nbi_app.prepare_api
+  File "son_nbi/service/pm/service.pyx", line 94, in son_nbi.service.pm.service.SonPmService.__init__
+  File "son_nbi/app/son_nbi_app.pyx", line 213, in son_nbi.app.son_nbi_app.prepare_api.lambda
+  File "son_nbi/app/son_nbi_app.pyx", line 355, in son_nbi.app.son_nbi_app.get_kpi_clients_map
+  File "son_nbi/app/son_nbi_app.pyx", line 362, in son_nbi.app.son_nbi_app.get_first_available_region_name
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/region.py", line 53, in getRegionNames
+    return self.client.get(params=region_params)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 186, in get
+    return self.client.get(self.service_resolver.resolve(), relativePath, params, checkError=checkError, **options)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 81, in get
+    verify=verify, checkError=checkError, **options)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 133, in request
+    return self._prepare_response(checkError, response, stream)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 151, in _prepare_response
+    self.checkResponse(response)
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/async_client.py", line 113, in checkResponse
+    raise Exception(u"Service returned code {0}. Message: {1}".format(response.status_code, response.text))
+Exception: Service returned code 502. Message: <html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - unable to load app 0 (mountpoint='') (callable not found or import error)
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - *** no app loaded. going in full dynamic mode ***
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - dropping root privileges after application loading
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - *** uWSGI is running in multiple interpreter mode ***
+[uwsgi] | 2020-09-07 10:45:20 +0000 | - gracefully (RE)spawned uWSGI master process (pid: 7079)
+:
+
+
+
+
+
+
+
+07-Sep-2020 10:45:34.916 INFO [localhost-startStop-1] com.sun.jersey.api.core.ScanningResourceConfig.logClasses Root resource classes found:
+  class com.nsn.ood.rest.SiteCreationRESTImpl
+07-Sep-2020 10:45:34.916 INFO [localhost-startStop-1] com.sun.jersey.api.core.ScanningResourceConfig.init No provider classes found.
+07-Sep-2020 10:45:34.974 INFO [localhost-startStop-1] com.sun.jersey.server.impl.application.WebApplicationImpl.initiate Initiating Jersey application, version 'Jersey: 1.2 05/07/2010 02:11 PM'
+2020-09-07 10:45:35 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:704 - Deployment of configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/state_engine_servlet.xml] has finished in [12,569] ms
+2020-09-07 10:45:35 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:570 - Deploying configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/output.xml]
+2020-09-07 10:45:40 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars:264 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-09-07 10:45:40 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:704 - Deployment of configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/output.xml] has finished in [4,734] ms
+2020-09-07 10:45:40 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:570 - Deploying configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/LicenseManagement.xml]
+2020-09-07 10:45:42 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars:264 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-09-07 10:45:42 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:704 - Deployment of configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/LicenseManagement.xml] has finished in [2,198] ms
+2020-09-07 10:45:42 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor:570 - Deploying configuration descriptor [/home/vson/opt/apache-tomcat-8.5.34/conf/Catalina/localhost/data_response_servlet.xml]
+[uwsgi] | 2020-09-07 10:45:47 +0000 | - received message 1 from emperor
+[uwsgi] | 2020-09-07 10:45:47 +0000 | - [uwsgi-daemons] stopping daemon (pid: 29958): /home/vson/opt/tomcat/bin/catalina.sh run
+[uwsgi] | 2020-09-07 10:45:48 +0000 | - ...gracefully killing workers...
+[uwsgi] | 2020-09-07 10:45:48 +0000 | - Gracefully killing worker 1 (pid: 29957)...
+  File "/home/vson/enet/lib/python3.7/site-packages/enet_app_lib/uwsgiServer.py", line 161, in <module>
+
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - worker 1 buried after 1 seconds
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - binary reloading uWSGI...
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - chdir() to /etc/enet/enetservice/run
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - closing all non-uwsgi socket fds > 2 (max_fd = 16384)...
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - found fd 7 mapped to socket 0 (/var/run/enet/tomcat.sock)
+[uwsgi] | 2020-09-07 10:45:49 +0000 | - running /home/vson/enet/bin/uwsgi
+*** has_emperor mode detected (fd: 23) ***
+
+
+
+
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance auth_api_app.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance son_app_manager_app.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance emailApp.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance son_nbi_app.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance user_manager.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance escript.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance enb_autoplanning_manager_app.ini
+Mon Sep  7 10:45:16 2020 - [emperor] reload the uwsgi instance scriptPlanMapperApp.ini
+Mon Sep  7 10:45:20 2020 - [emperor] vassal son_nbi_app.ini is ready to accept requests
+Mon Sep  7 10:45:20 2020 - [emperor] vassal module_commanding_app.ini is ready to accept requests
+Mon Sep  7 10:45:20 2020 - [emperor] vassal tomcat.ini is ready to accept requests
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance task_mon.ini
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance son_nbi_app.ini
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance license_manager.ini
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance escript.ini
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance module_commanding_app.ini
+Mon Sep  7 10:45:47 2020 - [emperor] reload the uwsgi instance tomcat.ini
+Mon Sep  7 10:45:49 2020 - [emperor] vassal son_nbi_app.ini is ready to accept requests
+Mon Sep  7 10:46:16 2020 - [emperor] reload the uwsgi instance son_nbi_app.ini
+Mon Sep  7 10:46:16 2020 - [emperor] reload the uwsgi instance license_manager.ini
+Mon Sep  7 10:46:16 2020 - [emperor] reload the uwsgi instance escript.ini
+Mon Sep  7 10:46:16 2020 - [emperor] vassal emailApp.ini is ready to accept requests
+Mon Sep  7 10:46:18 2020 - [emperor] vassal enb_autoplanning_manager_app.ini is ready to accept requests
+Mon Sep  7 10:46:18 2020 - [emperor] vassal auth_api_app.ini is ready to accept requests
+Mon Sep  7 10:46:18 2020 - [emperor] vassal son_nbi_app.ini is ready to accept requests
+Mon Sep  7 10:46:20 2020 - [emperor] vassal scriptPlanMapperApp.ini is ready to accept requests
+Mon Sep  7 10:46:21 2020 - [emperor] vassal user_manager.ini is ready to accept requests
+Mon Sep  7 10:46:21 2020 - [emperor] vassal son_app_manager_app.ini is ready to accept requests
+Mon Sep  7 10:46:21 2020 - [emperor] vassal son_app_manager_app.ini is now loyal
+Mon Sep  7 10:46:22 2020 - [emperor] vassal sonConfigApp.ini is ready to accept requests
+Mon Sep  7 10:46:38 2020 - [emperor] vassal license_manager.ini is ready to accept requests
+Mon Sep  7 10:46:45 2020 - [emperor] vassal task_mon.ini is ready to accept requests
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance sonConfigApp.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance auth_api_app.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance son_app_manager_app.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance emailApp.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance task_mon.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance son_nbi_app.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance license_manager.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance user_manager.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance enb_autoplanning_manager_app.ini
+Mon Sep  7 10:46:48 2020 - [emperor] reload the uwsgi instance scriptPlanMapperApp.ini
+Mon Sep  7 10:46:50 2020 - [emperor] vassal tomcat.ini is ready to accept requests
+:
+
+
+
+
+
+ File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service emailService and app emailApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: emailApp, service_name: emailService, service_path: /email
+ERROR   | 2020-09-07 10:46:14+0000| service_discovery:179| 7063|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...27
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service emailService and app emailApp
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: emailApp, service_name: emailService, service_path: /email
+ERROR   | 2020-09-07 10:46:16+0000| service_discovery:179| 7063|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...28
+Traceback (most recent call last):
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - received message 1 from emperor
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - ...gracefully killing workers...
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - Gracefully killing worker 1 (pid: 30223)...
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+Traceback (most recent call last):
+
+
+During handling of the above exception, another exception occurred:
+
+
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - worker 1 buried after 1 seconds
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - binary reloading uWSGI...
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - chdir() to /etc/enet/enetservice/run
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - closing all non-uwsgi socket fds > 2 (max_fd = 16384)...
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - found fd 7 mapped to socket 0 (/var/run/enet/emailApp.sock)
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - running /home/vson/enet/bin/uwsgi
+*** has_emperor mode detected (fd: 13) ***
+[uWSGI] getting INI configuration from /etc/enet/enetservice/baseApp.ini
+[uWSGI] getting INI configuration from emailApp.ini
+(END)
+
+
+
+
+
+
+ERROR   | 2020-09-07 10:46:17+0000| service_discovery:179| 7102|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...28
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service user_manager_service and app user_manager
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: user_manager, service_name: user_manager_service, service_path: /user-manager
+ERROR   | 2020-09-07 10:46:19+0000| service_discovery:179| 7102|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...29
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service user_manager_service and app user_manager
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - received message 1 from emperor
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - ...gracefully killing workers...
+[uwsgi] | 2020-09-07 10:46:48 +0000 | - Gracefully killing worker 1 (pid: 30262)...
+Traceback (most recent call last):
+
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - worker 1 buried after 1 seconds
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - binary reloading uWSGI...
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - chdir() to /etc/enet/enetservice/run
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - closing all non-uwsgi socket fds > 2 (max_fd = 16384)...
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - found fd 7 mapped to socket 0 (/var/run/enet/user_manager.sock)
+[uwsgi] | 2020-09-07 10:46:49 +0000 | - running /home/vson/enet/bin/uwsgi
+*** has_emperor mode detected (fd: 18) ***
+[uWSGI] getting INI configuration from /etc/enet/enetservice/baseApp.ini
+[uWSGI] getting INI configuration from user_manager.ini
+
+
+
+
+
+
+
+
+
+Exception: Couldn't create entry in app server for service task_mon and app task_mon
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: task_mon, service_name: task_mon, service_path: /task_mon
+ERROR   | 2020-09-07 10:47:45+0000| service_discovery:179| 7072|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...25
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service task_mon and app task_mon
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: task_mon, service_name: task_mon, service_path: /task_mon
+ERROR   | 2020-09-07 10:47:47+0000| service_discovery:179| 7072|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...26
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 98, in create_app_server
+    service_name, app_name))
+  File "/home/vson/enet/lib/python3.7/site-packages/service_discovery_public/service_discovery.py", line 180, in _execute_http_method
+    raise Exception(error_msg)
+Exception: Couldn't create entry in app server for service task_mon and app task_mon
+Creating app server: ip: 192.168.17.240, api_port: 9600, app_name: task_mon, service_name: task_mon, service_path: /task_mon
+ERROR   | 2020-09-07 10:47:49+0000| service_discovery:179| 7072|  Unhandled status 502 from http://192.168.17.241:9600/app_servers
+waiting for app_servers api to respond...27
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/enetclients/app_manager.py", line 178, in register_app
+    service_name=service_name, service_path=service_path)
+[uwsgi] | 2020-09-07 10:47:49 +0000 | - [uwsgi-daemons] spawning "~/enet/bin/python -m enet_task_mon task" (uid: 1003 gid: 1006)
+[uwsgi] | 2020-09-07 10:47:49 +0000 | - [uwsgi-daemons] spawning "~/enet/bin/python -m enet_task_mon custom_task" (uid: 1003 gid: 1006)
+user is missing from configuration, default value used...
+secret is missing from configuration, default value used...
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/vson/enet/lib/python3.7/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1321, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "license_manager/wrapper/lm_service.pyx", line 110, in license_manager.wrapper.lm_service.LicenseManagerService.refresh_license_cache
+  File "license_manager/wrapper/lm_service.pyx", line 147, in license_manager.wrapper.lm_service.LicenseManagerService._get_all_valid_licenses
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/vson/enet/lib/python3.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+(END)
+
+

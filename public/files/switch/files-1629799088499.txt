@@ -1,0 +1,15 @@
+#! bin/bash
+
+#This script is made by karim Alkady on 25-7-2020 to add an extension “.new” to all the files in a directory
+
+read -p " Please enter required path to edit all files with .new extension : " path
+
+file=$path/*
+
+#echo $file
+
+for f in $file 
+	do 
+		mv $f "${f}.new" 
+	done
+
