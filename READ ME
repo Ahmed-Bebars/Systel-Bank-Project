@@ -1,0 +1,20 @@
+please download below sources before installation
+Node Js RPM Package https://www.4shared.com/s/fcuEUySYuiq
+download mysql version mysql-8.0.26-1.el7.x86_64.rpm-bundle.tar from link https://dev.mysql.com/downloads/file/?id=506416
+download Application and installation script from github account https://github.com/Ahmed-Bebars/Systel-Bank-Project/
+setup redhat 7.8/Centos7.8 
+Create directory [mkdir /opt/install]
+copy installation script and node Js and mysql and application package to directory /opt/install
+make sure there is installation ISO connected on your VM before installation
+make sure your VM connected with internet before start
+follow up below steps:
+  1-cd /opt/install
+  2-chmod a+x *.sh
+  3-use root user to run script ./installBPWeb_APP.sh
+  4-make sure script finish installation with no error
+  5-check application and database service:
+      a-systemctl status bpwebd
+      b-systemctl status mysqld
+  6-open your browser and write http://<VMIP>:3000/ for example: http:127.0.0.1:3000/
+  7-for login user admin/systel@0987
+  8-for Database user root/Nokia_1234
